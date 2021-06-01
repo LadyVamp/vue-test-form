@@ -1,0 +1,21 @@
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.card {
+  border: 1px solid gray;
+  background-color: silver;
+  padding: 10px 5px;
+  border-radius: 5px;
+  text-align: left;
+  padding: 10px;
+}
+.content {
+  border: 1px solid gray;
+  background-color: white;
+  padding: 10px;
+}
+section {
+  background-color: whitesmoke;
+}
