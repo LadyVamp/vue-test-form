@@ -29,8 +29,29 @@
         </div>
       </div>
     </form>
-    <section class="card">
+    <section class="card bg-gray-50" v-if="attrs">
       <h3>Дополнительные характеристики</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>№</th>
+            <th>Характеристика</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(item, index) in attrs" :key="item.index">
+            <td>{{ index }}</td>
+            <td>
+              <span v-if="item.attr_code">{{ item.attr_code }}.</span>
+              {{ item.attr_name }}
+              <span class="font-bold">: {{ item.attr_value }}</span>
+              <span v-if="item.parent_path" class="text-gray-500"
+                >&nbsp;({{ item.parent_path }})</span
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </section>
     <section class="card">
       <h3>Файлы</h3>
@@ -43,17 +64,20 @@ export default {
   data() {
     return {
       data: null,
+      attrs: null,
     };
   },
   created() {
     // Simple GET request using fetch
     fetch(
-      "https://gist.githubusercontent.com/LadyVamp/bed9499391bb8286d047bc966fdba4bc/raw/feee121c0d5ad23295e279b79c94736b1925ac74/test-data1"
+      "https://gist.githubusercontent.com/LadyVamp/bed9499391bb8286d047bc966fdba4bc/raw/d3f0ca3504a406bdaa70cf2181760e069b41bb94/test-data1"
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         this.data = data;
+        this.attrs = data.attrs;
+        console.log("attrs %o", data.attrs);
       });
   },
   components() {},
