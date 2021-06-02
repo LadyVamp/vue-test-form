@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container card bg-gray p-2">
     <app-document-card></app-document-card>
   </div>
 </template>

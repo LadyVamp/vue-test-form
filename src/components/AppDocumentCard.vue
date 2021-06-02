@@ -1,24 +1,40 @@
 <template>
-  <div class="card">
-    <h2 v-if="data">{{ data.name }}</h2>
-    <div class="content">
-      <section>
-        <h3>Общие характеристики</h3>
-        <div v-if="data">
-          <p>{{ data.num }}</p>
-          <p>{{ data.reg_date }}</p>
-          <p>{{ data.source_name }}</p>
-          <p>{{ data.source_ed_id }}</p>
-          <p>{{ data.save_period }}</p>
+  <h2 v-if="data">{{ data.name }}</h2>
+  <div class="content">
+    <form class="card bg-gray-50" v-if="data">
+      <div class="flex-container">
+        <div class="mr-5">
+          <div class="form-control">
+            <label for="">Номер</label>
+            <input type="text" v-model="data.num" />
+          </div>
+          <div class="form-control">
+            <label for="">Дата регистрации</label>
+            <input type="text" v-model="data.reg_date" />
+          </div>
+          <div class="form-control">
+            <label for="">Срок хранения в ЦХЭД, год (лет)</label>
+            <input type="number" min="0" v-model="data.save_period" />
+          </div>
         </div>
-      </section>
-      <section>
-        <h3>Дополнительные характеристики</h3>
-      </section>
-      <section>
-        <h3>Файлы</h3>
-      </section>
-    </div>
+        <div class="mr-5">
+          <div class="form-control">
+            <label for="">Источник</label>
+            <input type="text" v-model="data.source_name" />
+          </div>
+          <div class="form-control">
+            <label for="">Идентификатор ЭД в источнике</label>
+            <input type="text" v-model="data.source_ed_id" />
+          </div>
+        </div>
+      </div>
+    </form>
+    <section class="card">
+      <h3>Дополнительные характеристики</h3>
+    </section>
+    <section class="card">
+      <h3>Файлы</h3>
+    </section>
   </div>
 </template>
 
@@ -40,6 +56,7 @@ export default {
         this.data = data;
       });
   },
+  components() {},
 };
 </script>
 
