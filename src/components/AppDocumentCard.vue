@@ -55,6 +55,32 @@
     </section>
     <section class="card">
       <h3>Файлы</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>№</th>
+            <th>Наименование</th>
+            <th>Роль файла</th>
+            <th>Файл</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(item, index) in files" :key="item.index">
+            <td>{{ index }}</td>
+            <td>
+              {{ item.file_name }}
+            </td>
+            <td>
+              {{ item.file_role }}
+            </td>
+            <td>
+              <a href="{{ item.file_path }}">
+                <img src="../assets/download.svg" alt=""
+              /></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </section>
   </div>
 </template>
@@ -65,6 +91,7 @@ export default {
     return {
       data: null,
       attrs: null,
+      files: null,
     };
   },
   created() {
@@ -77,7 +104,8 @@ export default {
         // console.log(data);
         this.data = data;
         this.attrs = data.attrs;
-        console.log("attrs %o", data.attrs);
+        this.files = data.files;
+        console.log("files %o", data.files);
       });
   },
   components() {},
