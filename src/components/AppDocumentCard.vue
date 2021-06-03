@@ -75,17 +75,22 @@
             </td>
             <td>
               <a href="{{ item.file_path }}">
-                <img src="../assets/download.svg" alt=""
+                <img class="icon" src="../assets/download.svg" alt=""
               /></a>
             </td>
           </tr>
         </tbody>
       </table>
     </section>
+    <section class="card">
+       <app-shipping-containers></app-shipping-containers>
+    </section>
   </div>
 </template>
 
 <script>
+import AppShippingContainers from "./AppShippingContainers";
+
 export default {
   data() {
     return {
@@ -97,7 +102,7 @@ export default {
   created() {
     // Simple GET request using fetch
     fetch(
-      "https://gist.githubusercontent.com/LadyVamp/545553debe212fd989ccc6623e9a9fe8/raw/538cba66bbd4b37d7b732ebe124a404206727463/files_with_parent.json"
+      "https://gist.githubusercontent.com/LadyVamp/545553debe212fd989ccc6623e9a9fe8/raw/3c5522abe26cd000717d838c9270b5fc21c7000c/files-with-parent.json"
     )
       .then((response) => response.json())
       .then((data) => {
@@ -105,10 +110,12 @@ export default {
         this.data = data;
         this.attrs = data.attrs;
         this.files = data.files;
-        console.log("files %o", data.files);
+        // console.log("files %o", data.files);
       });
   },
-  components() {},
+  components: {
+    AppShippingContainers,
+  },
 };
 </script>
 
