@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Транспортные контейнеры</h3>
+    <h4 class="title">Транспортные контейнеры</h4>
     <table>
       <thead>
         <tr>
