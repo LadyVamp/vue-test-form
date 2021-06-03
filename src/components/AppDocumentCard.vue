@@ -40,7 +40,7 @@
         </thead>
         <tbody>
           <tr v-for="(item, index) in attrs" :key="item.index">
-            <td>{{ index }}</td>
+            <td>{{ index + 1 }}</td>
             <td>
               <span v-if="item.attr_code">{{ item.attr_code }}.</span>
               {{ item.attr_name }}
@@ -66,7 +66,7 @@
         </thead>
         <tbody>
           <tr v-for="(item, index) in files" :key="item.index">
-            <td>{{ index }}</td>
+            <td>{{ index + 1 }}</td>
             <td>
               {{ item.file_name }}
             </td>
@@ -97,7 +97,7 @@ export default {
   created() {
     // Simple GET request using fetch
     fetch(
-      "https://gist.githubusercontent.com/LadyVamp/bed9499391bb8286d047bc966fdba4bc/raw/d3f0ca3504a406bdaa70cf2181760e069b41bb94/test-data1"
+      "https://gist.githubusercontent.com/LadyVamp/545553debe212fd989ccc6623e9a9fe8/raw/538cba66bbd4b37d7b732ebe124a404206727463/files_with_parent.json"
     )
       .then((response) => response.json())
       .then((data) => {
