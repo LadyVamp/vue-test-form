@@ -1,121 +1,128 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Inter, Roboto, Oxygen, Fira Sans, Helvetica Neue, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 16px;
-    color: #2c3e50;
+  font-family: Inter, Roboto, Oxygen, Fira Sans, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  color: #2c3e50;
 }
 
 $gray-50: rgba(249, 250, 251);
 $gray-500: rgba(107, 114, 128);
-$blue-50: #EFF6FF;
+$blue-50: #eff6ff;
 
 .bg-gray-50 {
-    background-color: $gray-50;
+  background-color: $gray-50;
 }
 
 .text-gray-500 {
-    color: $gray-500;
+  color: $gray-500;
 }
 
 .font-bold {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .container {
-    margin: 0 auto;
-    max-width: 1000px;
-    text-align: left;
+  margin: 0 auto;
+  max-width: 1000px;
+  text-align: left;
 }
 
 .p-2 {
-    padding: 2rem;
+  padding: 2rem;
 }
 .mr-5 {
-    margin-right: 5rem;
+  margin-right: 5rem;
 }
 
 .flex-container {
-    display: flex;
+  display: flex;
 }
 
-table, th, td {
-    border: 1px solid silver;
-    border-collapse: collapse;
-    padding: 5px;
-    font-size: 14px;   
+table,
+th,
+td {
+  border: 1px solid silver;
+  border-collapse: collapse;
+  padding: 5px;
+  font-size: 14px;
 }
 
 table {
-    width: 100%;
+  width: 100%;
 }
 
 th {
-    background-color: $blue-50;
+  background-color: $blue-50;
 }
 
 .card {
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 10px;
-    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
-    text-align: left;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
 }
 
 .form-control {
-    position: relative;
-    margin-bottom: 0.5rem;
-    
-    input {
-        margin: 0;
-        outline: none;
-        border: 2px solid white;
-        color: #2c3e50;
-        padding: 0.5rem 1.5rem;
-        font-size: 1rem;
-    }
-    label {
-        display: block;
-        margin: 0 0 0.1rem 0.3rem;
-        font-weight: 700;
-        font-size: 14px;
-        border-bottom: 1px solid rgba(0,0,0,.125);
-        padding-bottom: 0.1rem;
-    }
-    input:active, input:focus {
-        transition: border 0.22s;
-        border-bottom: 2px solid #42b983;
-    }
+  position: relative;
+  margin-bottom: 0.5rem;
+
+  input {
+    margin: 0;
+    outline: none;
+    border: 2px solid white;
+    color: #2c3e50;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+  }
+  label {
+    display: block;
+    margin: 0 0 0.1rem 0.3rem;
+    font-weight: 700;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    padding-bottom: 0.1rem;
+  }
+  input:active,
+  input:focus {
+    transition: border 0.22s;
+    border-bottom: 2px solid #42b983;
+  }
 }
 
 .icon {
-    width: 30px;
+  width: 30px;
 }
 
 .card-header {
-    padding: .75rem 1.25rem;
-    margin-bottom: 0;
-    background-color: #bac8d3;
-    border-radius: 10px;
-    font-weight: 700;
-}  
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: #bac8d3;
+  border-radius: 10px;
+  font-weight: 700;
+}
 
 section {
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border: 1px solid silver;
-    .title {
-        margin: 0 0 10px 0;
-    }
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid silver;
+  .title {
+    margin: 0 0 10px 0;
+  }
 }
 
 form {
-    margin-top: 50px;
-    margin-bottom: 10px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.pl-4 {
+  padding-left: 1rem;
 }

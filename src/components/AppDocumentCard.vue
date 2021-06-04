@@ -70,7 +70,7 @@
           <tbody>
             <tr v-for="(item, index) in files" :key="item.index">
               <td>{{ index + 1 }}</td>
-              <td>
+              <td :class="{ 'pl-4': item.parent_file }">
                 {{ item.file_name }}
               </td>
               <td>
@@ -115,7 +115,7 @@ export default {
         this.data = data;
         this.attrs = data.attrs;
         this.files = data.files;
-        // console.log("files %o", data.files);
+        console.log("files %o", data.files);
       });
   },
   components: {
@@ -124,5 +124,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

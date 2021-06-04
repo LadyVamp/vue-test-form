@@ -53,7 +53,7 @@ export default {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log("tk %o", data);
+        // console.log("tk %o", data);
         this.data = data.tk;
       });
   },
