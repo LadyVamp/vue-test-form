@@ -76,6 +76,7 @@
             <tr v-for="(item, index) in files" :key="item.index">
               <td>{{ index + 1 }}</td>
               <td :class="{ 'pl-4': item.parent_file }">
+              <!-- <td :class="[{ 'pl-4': item.parent_file }, { 'pl-8': parents.indexOf(item.parent_file) != -1}]"> -->
                 {{ item.file_name }}
               </td>
               <td>
@@ -107,6 +108,7 @@ export default {
       data: null,
       attrs: null,
       files: null,
+      parents: null,
     };
   },
   created() {
@@ -119,6 +121,24 @@ export default {
         this.data = data;
         this.attrs = data.attrs;
         this.files = data.files;
+        console.log("files %o", data.files);
+
+        // todo: отступ для дочерних элементов
+        let childs = [];
+        data.files.forEach((element) => {
+          if (element.parent_file) {
+            childs.push(element);
+          }
+        });
+        console.log("childs", childs);
+        let parents = [];
+        childs.forEach((element) => {
+          parents.push(element.parent_file.f1_id);
+        });
+        console.log("parents", parents);
+        // this.parents.push(parents)
+        // console.log(this.parents);
+        // console.log(parents.indexOf("2") != -1);
       });
   },
   methods: {
