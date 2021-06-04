@@ -15,9 +15,14 @@ body {
 $gray-50: rgba(249, 250, 251);
 $gray-500: rgba(107, 114, 128);
 $blue-50: #eff6ff;
+$blue-400: #93c5fd;
 
 .bg-gray-50 {
   background-color: $gray-50;
+}
+
+.primary {
+  background-color: $blue-400;
 }
 
 .text-gray-500 {
@@ -126,3 +131,18 @@ form {
 .pl-4 {
   padding-left: 1rem;
 }
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  font-weight: 700;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
+  &:hover {
+    cursor: pointer;
+  }
+}
+

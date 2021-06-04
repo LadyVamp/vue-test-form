@@ -4,7 +4,10 @@
       <div class="card-header">
         {{ data.name }}
       </div>
-      <form>
+      <form @submit.prevent="submit">
+        <div class="flex-end">
+          <button class="btn primary">Отправить</button>
+        </div>
         <div class="flex-container">
           <div class="mr-5">
             <div class="form-control">
@@ -120,6 +123,11 @@ export default {
   },
   components: {
     AppShippingContainers,
+  },
+  methods: {
+    submit() {
+      console.log("submit");
+    },
   },
 };
 </script>
