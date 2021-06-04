@@ -115,7 +115,7 @@ export default {
         this.data = data;
         this.attrs = data.attrs;
         this.files = data.files;
-        console.log("files %o", data.files);
+        // console.log("files %o", data.files);
       });
   },
   components: {
