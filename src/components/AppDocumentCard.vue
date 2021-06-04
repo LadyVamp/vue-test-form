@@ -6,7 +6,12 @@
       </div>
       <form @submit.prevent="submit">
         <div class="flex-end">
-          <button class="btn primary">Отправить</button>
+          <button
+            class="btn primary"
+            :disabled="!isValid"
+          >
+            Отправить
+          </button>
         </div>
         <div class="flex-container">
           <div class="mr-5">
@@ -121,13 +126,18 @@ export default {
         // console.log("files %o", data.files);
       });
   },
-  components: {
-    AppShippingContainers,
-  },
   methods: {
     submit() {
-      console.log("submit");
+      console.log("submit", this.data.name);
     },
+  },
+  computed: {
+    isValid() {
+      return this.data.num.length > 0;
+    },
+  },
+  components: {
+    AppShippingContainers,
   },
 };
 </script>

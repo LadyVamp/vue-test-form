@@ -140,9 +140,17 @@ form {
 .btn {
   padding: 0.5rem 1.5rem;
   font-weight: 700;
+  color: black;
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
   &:hover {
     cursor: pointer;
   }
 }
 
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 1;
+  background: #eee;
+  border-color: #ddd;
+  color: #999;
+}
