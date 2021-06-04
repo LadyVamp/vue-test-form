@@ -6,10 +6,7 @@
       </div>
       <form @submit.prevent="submit">
         <div class="flex-end">
-          <button
-            class="btn primary"
-            :disabled="!isValid"
-          >
+          <button class="btn primary" :disabled="!isValid">
             Отправить
           </button>
         </div>
@@ -119,16 +116,14 @@ export default {
     )
       .then((response) => response.json())
       .then((data) => {
-        // console.log(data);
         this.data = data;
         this.attrs = data.attrs;
         this.files = data.files;
-        // console.log("files %o", data.files);
       });
   },
   methods: {
     submit() {
-      console.log("submit", this.data.name);
+      console.log("submit", this.data);
     },
   },
   computed: {

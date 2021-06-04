@@ -53,12 +53,10 @@ export default {
     )
       .then((response) => response.json())
       .then((data) => {
-        // console.log("tk %o", data);
         this.data = data.tk;
       });
   },
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
